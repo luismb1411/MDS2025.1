@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Account</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="username" class="ion-padding-top ion-text-center">
+    <img src="https://www.gravatar.com/avatar?d=mm&s=140" alt="avatar" />
+    <h2>{{aluno.matricula}}</h2>
+    <h2>{{aluno.nome}}</h2>
+    <p>Curso {{aluno.curso.codigo}} - {{aluno.curso.nome}}</p>
+    <p>{{aluno.periodoIngresso.ano}}.{{aluno.periodoIngresso.numero}}</p>
+    <p>IRA: {{aluno.ira}}</p>
+
+    <ion-list inset>
+      <!-- 
+      <ion-item (click)="updatePicture()">Update Picture</ion-item>
+      <ion-item (click)="changeUsername()">Change Username</ion-item>
+      <ion-item (click)="changePassword()">Change Password</ion-item>
+      <ion-item (click)="support()">Support</ion-item> -->
+      <ion-item (click)="logout()">Logout</ion-item>
+    </ion-list>
+  </div>
+</ion-content>

@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>SIGAA</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="login-logo">
+    <img src="assets/img/unb-logo.png" alt="Ionic logo">
+  </div>
+
+  <div class="login-form">
+    <form #loginForm="ngForm" novalidate>
+      <ion-input
+        label="matrícula"
+        labelPlacement="stacked"
+        fill="solid"
+        [(ngModel)]="login.username"
+        name="username"
+        type="text"
+        #username="ngModel"
+        spellcheck="false"
+        autocapitalize="off"
+        errorText="Username is required"
+        required>
+      </ion-input>
+
+      <ion-input
+        label="senha"
+        labelPlacement="stacked"
+        fill="solid"
+        [(ngModel)]="login.password"
+        name="password"
+        type="password"
+        #password="ngModel"
+        errorText="Password is required"
+        required>
+      </ion-input>
+
+      <ion-row>
+        <ion-col>
+          <ion-button (click)="onLogin(loginForm)" type="submit" expand="block">Entrar</ion-button>
+        </ion-col>
+<!--
+        <ion-col>
+          <ion-button (click)="onSignup()" color="light" expand="block">Signup</ion-button>
+        </ion-col>
+-->        
+      </ion-row>
+    </form>
+  </div>
+
+</ion-content>
