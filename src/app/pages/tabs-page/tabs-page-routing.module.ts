@@ -34,6 +34,13 @@ const routes: Routes = [
                 (m) => m.MatriculaPageModule
               ),
           },
+          {
+            path: "matricula-details/matriculaId",
+            loadChildren: () =>
+              import("../matricula-detail/matricula-detail.module").then(
+                (m) => m.MatriculaDetailPageModule
+              ),
+          },
         ],
       },
       {

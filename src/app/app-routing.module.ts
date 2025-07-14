@@ -45,7 +45,10 @@ const routes: Routes = [
       import("./pages/matricula/matricula.module").then(
         (m) => m.MatriculaPageModule
       ),
-    canMatch: [checkTutorialGuard],
+  },
+  {
+    path: 'matricula-detail',
+    loadChildren: () => import('./pages/matricula-detail/matricula-detail.module').then( m => m.MatriculaDetailPageModule)
   },
 ];
 

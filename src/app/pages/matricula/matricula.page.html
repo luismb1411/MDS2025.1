@@ -9,6 +9,22 @@
 
 <ion-content>
   <ion-list>
-    <ion-item> </ion-item>
+    <ion-item *ngFor="let Matricula of matriculas">
+      <ion-label>
+        <h2>{{ matricula.turma.nome}}</h2>
+
+        <p>
+          Código: {{ matricula.turma.discplina.codigo }} - Turma: {{
+          matricula.turma.discplina.nome }}
+        </p>
+
+        <div *ngFor="let horario of matricula.horarios" class="horario-info">
+          <p>
+            {{ matricula.horario.dia }}: {{ matricula.horario.horaInicio }} - {{
+            matricula.horario.horaFim }}
+          </p>
+        </div>
+      </ion-label>
+    </ion-item>
   </ion-list>
 </ion-content>

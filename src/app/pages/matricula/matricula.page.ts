@@ -20,5 +20,6 @@ export class MatriculaPage implements OnInit {
 
   atualizarMatriculas() {
     this.matriculas = this.matriculaData.search();
+    console.log("Matrículas carregadas:", this.matriculas);
   }
 }
